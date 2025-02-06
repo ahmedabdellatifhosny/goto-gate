@@ -1,14 +1,14 @@
 "use client";
 import { Tabs, Tab } from "react-bootstrap";
 import { SetStateAction, useState } from "react";
-
 import Return from "./Return";
 import OneWay from "./OneWay";
 import MultiCity from "./MultiCity";
+import dynamic from "next/dynamic";
 
 export default function Hero() {
   const [activeTab, setActiveTab] = useState("return");
-
+  const Select = dynamic(() => import("react-select"), { ssr: false });
   const handleTabChange = (tab: SetStateAction<string>) => {
     setActiveTab(tab);
   };

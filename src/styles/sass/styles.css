@@ -154,6 +154,12 @@
 .multi-city .multi-title h4 {
   font-weight: bold;
 }
+.multi-city .trips {
+  margin: 20px 0;
+}
+.multi-city .trips label {
+  margin-bottom: 5px;
+}
 
 .footer {
   background: #000;

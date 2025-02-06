@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import dynamic from "next/dynamic";
 
-import "react-datepicker/dist/react-datepicker.css";
+
 export default function Return() {
   const Select = dynamic(() => import("react-select"), { ssr: false });
   const [isClearable, setIsClearable] = useState(true);

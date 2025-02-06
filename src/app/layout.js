@@ -1,6 +1,7 @@
 import Nav from "components/layout/Nav";
 import Footer from "components/layout/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "react-datepicker/dist/react-datepicker.css";
 import "../styles/sass/styles.css";
 
 export const metadata = {

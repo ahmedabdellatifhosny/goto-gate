@@ -63,7 +63,7 @@ export default function OneWay() {
                     className="start-date form-control"
                   />
                 </div>
-             
+
                 <div className="persons d-flex">
                   <div className="selected-passengers">
                     <label>Passengers</label>
