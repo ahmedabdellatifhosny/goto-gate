@@ -1,14 +1,12 @@
 "use client";
-import { Tabs, Tab, Col, Container, Row, Button } from "react-bootstrap";
+import { Tabs, Tab } from "react-bootstrap";
 import { SetStateAction, useState } from "react";
-import { Airports } from "../home/data";
-import dynamic from "next/dynamic";
-import Image from "next/image";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+
+import Return from "./Return";
+import OneWay from "./OneWay";
+import MultiCity from "./MultiCity";
 
 export default function Hero() {
-  const Select = dynamic(() => import("react-select"), { ssr: false });
   const [activeTab, setActiveTab] = useState("return");
 
   const handleTabChange = (tab: SetStateAction<string>) => {
@@ -20,14 +18,12 @@ export default function Hero() {
   }
 
   const Checkbox: React.FC<CheckboxProps> = ({ children, ...props }) => (
-    <label style={{ marginRight: "1em" }}>
+    <label>
       <input type="checkbox" {...props} />
       {children}
     </label>
   );
 
-  const [isClearable, setIsClearable] = useState(true);
-  const [startDate, setStartDate] = useState(new Date());
   return (
     <div className="hero">
       <div className="flight-search-box mx-auto rounded">
@@ -54,85 +50,8 @@ export default function Hero() {
             }
           >
             <div className="tab-content">
-              <div className="return ">
-                <Container>
-                  <Row>
-                    <Col md={8}>
-                      <div className="inputs-search d-flex justify-content-between">
-                        <div className="from-input">
-                          <Select
-                            className="basic-single"
-                            classNamePrefix="select"
-                            name="color"
-                            placeholder="From"
-                            options={Airports}
-                            isClearable={isClearable}
-                          />
-                        </div>
-                        <div className="image-arrows">
-                          <Image
-                            src="/images/icons/arrows.svg"
-                            width={30}
-                            height={30}
-                            alt="arrows"
-                          />
-                        </div>
-
-                        <div className="to-form">
-                          <Select
-                            className="basic-single"
-                            classNamePrefix="select"
-                            name="color"
-                            placeholder="To"
-                            options={Airports}
-                            isClearable={isClearable}
-                          />
-                        </div>
-
-                        <div
-                          style={{
-                            color: "hsl(0, 0%, 40%)",
-                            display: "inline-block",
-                            fontSize: 12,
-                            fontStyle: "italic",
-                            marginTop: "1em",
-                          }}
-                        ></div>
-                        <div className="dates d-flex">
-                          <div className="start">
-                            <label>Departure</label>
-                            <DatePicker
-                              dateFormat="yyyy/MM/dd"
-                              selected={startDate}
-                              onChange={(date: Date | null) =>
-                                setStartDate(date)
-                              }
-                              className="start-date form-control"
-                            />
-                          </div>
-                          <div className="end">
-                            <label>Return</label>
-                            <DatePicker
-                              dateFormat="yyyy/MM/dd"
-                              selected={startDate}
-                              onChange={(date: Date | null) =>
-                                setStartDate(date)
-                              }
-                              className="end-date form-control"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </Col>
-                    <Col md={4}>
-                      <div className="submit-form text-center">
-                        <Button variant="primary" className="text-capitalize">
-                          search flights
-                        </Button>
-                      </div>
-                    </Col>
-                  </Row>
-                </Container>
+              <div className="return">
+                <Return />
               </div>
             </div>
           </Tab>
@@ -153,7 +72,11 @@ export default function Hero() {
               </label>
             }
           >
-            <div className="tab-content">Tab content for One-Way</div>
+            <div className="tab-content">
+              <div className="one-way">
+                <OneWay />
+              </div>
+            </div>
           </Tab>
 
           <Tab
@@ -172,7 +95,11 @@ export default function Hero() {
               </label>
             }
           >
-            <div className="tab-content">Tab content for Multi-City</div>
+            <div className="tab-content">
+              <div className="multi-city">
+                <MultiCity />
+              </div>
+            </div>
           </Tab>
         </Tabs>
       </div>

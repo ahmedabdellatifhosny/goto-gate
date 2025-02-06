@@ -53,10 +53,6 @@
   -o-object-fit: contain;
      object-fit: contain;
 }
-.hero .inputs-search .btn-primary {
-  background-color: #000;
-  border: 1px solid #000;
-}
 .hero .inputs-search .dates {
   margin-top: 40px;
 }
@@ -72,14 +68,41 @@
 .hero .inputs-search .dates .end-date {
   width: 125px;
 }
-.hero .inputs-search .dates .form-control {
-  border-radius: 0;
+.hero .inputs-search .persons {
+  margin-left: 12.5%;
+}
+.hero .inputs-search .persons .class {
+  width: 125px;
+}
+.hero .inputs-search .persons .passengers {
+  width: 125px;
+}
+.hero .submit-form .btn-primary {
+  background-color: #41d3ff !important;
+  color: #000;
+  font-weight: 600;
+  border-color: #41d3ff;
+  width: 80%;
+  padding: 10px;
+}
+.hero .nostop .form-check {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  margin-top: 60px;
+  margin-left: 30px;
 }
 @media screen and (max-width: 767px) {
   .hero .flight-search-box {
     top: 25%;
     width: 90%;
   }
+}
+
+.one-way .inputs-search .dates .start-date {
+  width: 250px !important;
 }
 
 .footer {
