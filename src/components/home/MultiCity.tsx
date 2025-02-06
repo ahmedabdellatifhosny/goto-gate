@@ -4,7 +4,7 @@ import Select from "react-select";
 import { Airports, Passengers, Class } from "./data";
 import dynamic from "next/dynamic";
 import DatePicker from "react-datepicker";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faPlus, faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function MultiCity() {
@@ -127,59 +127,57 @@ export default function MultiCity() {
       </div>
       <div className="after-add-trip">
         <Container>
-        <div className="trips">
-        <Container>
-          <div className="multi-title">
-            <h5>Trip</h5>
+          <div className="trips">
+            <Container>
+              <div className="multi-title">
+                <h5>Trip</h5>
+              </div>
+              <Row>
+                <Col md={4}>
+                  <div className="from">
+                    <label>From</label>
+                    <Select
+                      className="basic-single"
+                      classNamePrefix="select"
+                      isClearable={isClearable}
+                      name="color"
+                      options={Airports}
+                      placeholder="From"
+                    />
+                  </div>
+                </Col>
+                <Col md={4}>
+                  <div className="to">
+                    <label>to</label>
+                    <Select
+                      className="basic-single"
+                      classNamePrefix="select"
+                      isClearable={isClearable}
+                      name="color"
+                      options={Airports}
+                      placeholder="To"
+                    />
+                  </div>
+                </Col>
+                <Col md={4} className="after-trip">
+                  <div className="dates d-flex">
+                    <div className="departure">
+                      <label>Departure</label>
+                      <DatePicker
+                        dateFormat="yyyy/MM/dd"
+                        selected={startDate}
+                        onChange={(date: Date | null) => setStartDate(date)}
+                        className="start-date form-control"
+                      />
+                    </div>
+                  </div>
+                  <Button variant="dark" className="text-capitalize">
+                    <FontAwesomeIcon icon={faX} />
+                  </Button>
+                </Col>
+              </Row>
+            </Container>
           </div>
-          <Row>
-            <Col md={4}>
-              <div className="from">
-                <label>From</label>
-                <Select
-                  className="basic-single"
-                  classNamePrefix="select"
-                  isClearable={isClearable}
-                  name="color"
-                  options={Airports}
-                  placeholder="From"
-                />
-              </div>
-            </Col>
-            <Col md={4}>
-              <div className="to">
-                <label>to</label>
-                <Select
-                  className="basic-single"
-                  classNamePrefix="select"
-                  isClearable={isClearable}
-                  name="color"
-                  options={Airports}
-                  placeholder="To"
-                />
-              </div>
-            </Col>
-            <Col md={4}>
-              <div className="dates d-flex">
-                <div className="departure">
-                  <label>Departure</label>
-                  <DatePicker
-                    dateFormat="yyyy/MM/dd"
-                    selected={startDate}
-                    onChange={(date: Date | null) => setStartDate(date)}
-                    className="start-date form-control"
-                  />
-                </div>
-              </div>
-            </Col>
-          </Row>
-          <div className="add-trip">
-            <Button variant="dark" className="text-capitalize">
-              <FontAwesomeIcon icon={faPlus} /> <span> add trip </span>
-            </Button>
-          </div>
-        </Container>
-      </div>
         </Container>
       </div>
     </div>

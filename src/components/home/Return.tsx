@@ -5,7 +5,6 @@ import Image from "next/image";
 import { useState } from "react";
 import dynamic from "next/dynamic";
 
-
 export default function Return() {
   const Select = dynamic(() => import("react-select"), { ssr: false });
   const [isClearable, setIsClearable] = useState(true);
@@ -15,35 +14,36 @@ export default function Return() {
       <Container>
         <Row>
           <Col md={8}>
-            <div className="inputs-search d-flex justify-content-between">
-              <div className="from-input">
-                <Select
-                  className="basic-single"
-                  classNamePrefix="select"
-                  name="color"
-                  placeholder="From"
-                  options={Airports}
-                  isClearable={isClearable}
-                />
-              </div>
-              <div className="image-arrows">
-                <Image
-                  src="/images/icons/arrows.svg"
-                  width={30}
-                  height={30}
-                  alt="arrows"
-                />
-              </div>
-
-              <div className="to-form">
-                <Select
-                  className="basic-single"
-                  classNamePrefix="select"
-                  name="color"
-                  placeholder="To"
-                  options={Airports}
-                  isClearable={isClearable}
-                />
+            <div className="inputs-search ">
+              <div className="reservation-form">
+                <div className="from-input">
+                  <Select
+                    className="basic-single"
+                    classNamePrefix="select"
+                    name="color"
+                    placeholder="From"
+                    options={Airports}
+                    isClearable={isClearable}
+                  />
+                </div>
+                <div className="image-arrows">
+                  <Image
+                    src="/images/icons/arrows.svg"
+                    width={30}
+                    height={30}
+                    alt="arrows"
+                  />
+                </div>
+                <div className="to-form">
+                  <Select
+                    className="basic-single"
+                    classNamePrefix="select"
+                    name="color"
+                    placeholder="To"
+                    options={Airports}
+                    isClearable={isClearable}
+                  />
+                </div>
               </div>
 
               <div

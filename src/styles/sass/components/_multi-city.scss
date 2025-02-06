@@ -24,5 +24,23 @@
         -o-border-radius: 10px;
       }
     }
+    .after-trip {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .btn-dark {
+        margin-top: 30px;
+        background-color: transparent;
+        color: #222;
+        border-color: #222;
+        width: 20%;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        height: 45px;
+      }
+    }
   }
 }

@@ -26,7 +26,7 @@ export default function Hero() {
 
   return (
     <div className="hero">
-      <div className="flight-search-box mx-auto rounded">
+      <div className="flight-search-box rounded">
         <Tabs
           activeKey={activeTab}
           onSelect={(tab) => setActiveTab(tab)}
