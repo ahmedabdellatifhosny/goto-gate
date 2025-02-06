@@ -151,6 +151,10 @@
   margin-left: 30px;
 }
 
+.multi-city .multi-title h4 {
+  font-weight: bold;
+}
+
 .footer {
   background: #000;
   color: #fff;
