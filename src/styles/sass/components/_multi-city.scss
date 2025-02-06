@@ -1,13 +1,28 @@
 .multi-city {
   .multi-title {
-    h4 {
+    h5 {
       font-weight: bold;
     }
   }
   .trips {
-    margin: 20px 0;
-    label{
+    margin: 40px 0;
+    label {
       margin-bottom: 5px;
+      text-transform: capitalize;
+    }
+    .add-trip {
+      margin: 20px 0;
+      .btn-dark {
+        background-color: transparent;
+        color: #000;
+        border-color: #000;
+        width: 15%;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+      }
     }
   }
 }
