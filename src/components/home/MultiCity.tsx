@@ -1,5 +1,3 @@
-
-
 export default function MultiCity() {
-  return <div>MultiCity</div>;
+  return <div className="multi-city">MultiCity</div>;
 }

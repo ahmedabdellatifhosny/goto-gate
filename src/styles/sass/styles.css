@@ -43,41 +43,48 @@
 .hero .flight-search-box .tab-content {
   padding: 10px;
 }
-.hero .inputs-search {
+@media screen and (max-width: 767px) {
+  .hero .flight-search-box {
+    top: 25%;
+    width: 90%;
+  }
+}
+
+.return .inputs-search {
   flex-wrap: wrap;
 }
-.hero .inputs-search .basic-single {
+.return .inputs-search .basic-single {
   width: 250px;
 }
-.hero .inputs-search img {
+.return .inputs-search img {
   -o-object-fit: contain;
      object-fit: contain;
 }
-.hero .inputs-search .dates {
+.return .inputs-search .dates {
   margin-top: 40px;
 }
-.hero .inputs-search .dates label {
+.return .inputs-search .dates label {
   display: block;
   margin-bottom: 5px;
   padding-left: 5px;
   font-size: 14px;
 }
-.hero .inputs-search .dates .start-date {
+.return .inputs-search .dates .start-date {
   width: 125px;
 }
-.hero .inputs-search .dates .end-date {
+.return .inputs-search .dates .end-date {
   width: 125px;
 }
-.hero .inputs-search .persons {
+.return .inputs-search .persons {
   margin-left: 12.5%;
 }
-.hero .inputs-search .persons .class {
+.return .inputs-search .persons .class {
   width: 125px;
 }
-.hero .inputs-search .persons .passengers {
+.return .inputs-search .persons .passengers {
   width: 125px;
 }
-.hero .submit-form .btn-primary {
+.return .submit-form .btn-primary {
   background-color: #41d3ff !important;
   color: #000;
   font-weight: 600;
@@ -85,7 +92,7 @@
   width: 80%;
   padding: 10px;
 }
-.hero .nostop .form-check {
+.return .nostop .form-check {
   display: flex;
   flex-direction: row;
   justify-content: start;
@@ -94,15 +101,57 @@
   margin-top: 60px;
   margin-left: 30px;
 }
-@media screen and (max-width: 767px) {
-  .hero .flight-search-box {
-    top: 25%;
-    width: 90%;
-  }
-}
 
+.one-way .inputs-search {
+  flex-wrap: wrap;
+}
+.one-way .inputs-search .basic-single {
+  width: 250px;
+}
+.one-way .inputs-search img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.one-way .inputs-search .dates {
+  margin-top: 40px;
+}
+.one-way .inputs-search .dates label {
+  display: block;
+  margin-bottom: 5px;
+  padding-left: 5px;
+  font-size: 14px;
+}
 .one-way .inputs-search .dates .start-date {
-  width: 250px !important;
+  width: 125px;
+}
+.one-way .inputs-search .dates .end-date {
+  width: 125px;
+}
+.one-way .inputs-search .persons {
+  margin-left: 12.5%;
+}
+.one-way .inputs-search .persons .class {
+  width: 125px;
+}
+.one-way .inputs-search .persons .passengers {
+  width: 125px;
+}
+.one-way .submit-form .btn-primary {
+  background-color: #41d3ff !important;
+  color: #000;
+  font-weight: 600;
+  border-color: #41d3ff;
+  width: 80%;
+  padding: 10px;
+}
+.one-way .nostop .form-check {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  margin-top: 60px;
+  margin-left: 30px;
 }
 
 .footer {
