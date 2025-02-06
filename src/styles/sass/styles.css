@@ -230,9 +230,17 @@ body {
 
 a {
   text-decoration: none;
-  color: #ccc;
 }
 
-ul {
-  list-style: none;
+.contact-info .cslink {
+  color: #065e94;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.contact-info .table-content ul {
+  list-style-type: number;
+  font-weight: bold;
+}
+.contact-info .table-content ul li {
+  text-decoration: underline;
 }/*# sourceMappingURL=styles.css.map */
