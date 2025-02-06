@@ -122,10 +122,7 @@
   font-size: 14px;
 }
 .one-way .inputs-search .dates .start-date {
-  width: 125px;
-}
-.one-way .inputs-search .dates .end-date {
-  width: 125px;
+  width: 250px;
 }
 .one-way .inputs-search .persons {
   margin-left: 12.5%;
