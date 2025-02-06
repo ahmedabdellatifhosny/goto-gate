@@ -43,6 +43,13 @@
 .hero .flight-search-box .tab-content {
   padding: 10px;
 }
+.hero .inputs-search .basic-single {
+  width: 250px;
+}
+.hero .inputs-search img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 @media screen and (max-width: 767px) {
   .hero .flight-search-box {
     top: 25%;
