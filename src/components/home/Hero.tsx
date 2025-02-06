@@ -4,6 +4,8 @@ import { SetStateAction, useState } from "react";
 import { Airports } from "../home/data";
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 export default function Hero() {
   const Select = dynamic(() => import("react-select"), { ssr: false });
@@ -25,7 +27,7 @@ export default function Hero() {
   );
 
   const [isClearable, setIsClearable] = useState(true);
-
+  const [startDate, setStartDate] = useState(new Date());
   return (
     <div className="hero">
       <div className="flight-search-box mx-auto rounded">
@@ -96,6 +98,30 @@ export default function Hero() {
                             marginTop: "1em",
                           }}
                         ></div>
+                        <div className="dates d-flex">
+                          <div className="start">
+                            <label>Departure</label>
+                            <DatePicker
+                              dateFormat="yyyy/MM/dd"
+                              selected={startDate}
+                              onChange={(date: Date | null) =>
+                                setStartDate(date)
+                              }
+                              className="start-date form-control"
+                            />
+                          </div>
+                          <div className="end">
+                            <label>Return</label>
+                            <DatePicker
+                              dateFormat="yyyy/MM/dd"
+                              selected={startDate}
+                              onChange={(date: Date | null) =>
+                                setStartDate(date)
+                              }
+                              className="end-date form-control"
+                            />
+                          </div>
+                        </div>
                       </div>
                     </Col>
                     <Col md={4}>

@@ -43,6 +43,9 @@
 .hero .flight-search-box .tab-content {
   padding: 10px;
 }
+.hero .inputs-search {
+  flex-wrap: wrap;
+}
 .hero .inputs-search .basic-single {
   width: 250px;
 }
@@ -53,6 +56,24 @@
 .hero .inputs-search .btn-primary {
   background-color: #000;
   border: 1px solid #000;
+}
+.hero .inputs-search .dates {
+  margin-top: 40px;
+}
+.hero .inputs-search .dates label {
+  display: block;
+  margin-bottom: 5px;
+  padding-left: 5px;
+  font-size: 14px;
+}
+.hero .inputs-search .dates .start-date {
+  width: 125px;
+}
+.hero .inputs-search .dates .end-date {
+  width: 125px;
+}
+.hero .inputs-search .dates .form-control {
+  border-radius: 0;
 }
 @media screen and (max-width: 767px) {
   .hero .flight-search-box {

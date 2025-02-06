@@ -37,19 +37,37 @@
       padding: 10px;
     }
   }
-.inputs-search {
-  .basic-single {
-    width: 250px;
-    
+  .inputs-search {
+    flex-wrap: wrap;
+    .basic-single {
+      width: 250px;
+    }
+    img {
+      object-fit: contain;
+    }
+    .btn-primary {
+      background-color: #000;
+      border: 1px solid #000;
+    }
+    .dates {
+      margin-top: 40px; 
+      label{
+        display: block;
+        margin-bottom: 5px;
+        padding-left: 5px;
+        font-size: 14px;
+      }
+      .start-date {
+        width: 125px;
+      }
+      .end-date {
+        width: 125px;
+      }
+      .form-control {
+        border-radius: 0;
+      }
+    }
   }
-  img{
-    object-fit: contain;
-  }
-  .btn-primary{
-    background-color: #000;
-    border: 1px solid #000;
-  }
-}
 
   @media screen and (max-width: 767px) {
     .flight-search-box {
