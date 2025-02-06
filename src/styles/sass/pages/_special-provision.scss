@@ -4,13 +4,19 @@
     font-weight: 700;
     text-decoration: underline;
   }
-  .table-content{
-    ul{
+  .table-content {
+    ul {
       list-style-type: number;
+      
       font-weight: bold;
-      li{
+      li {
         text-decoration: underline;
-        
+        a {
+          color: #222 ;
+          &:hover{
+            color: #065e94;
+          }
+        }
       }
     }
   }

@@ -243,4 +243,10 @@ a {
 }
 .contact-info .table-content ul li {
   text-decoration: underline;
+}
+.contact-info .table-content ul li a {
+  color: #222;
+}
+.contact-info .table-content ul li a:hover {
+  color: #065e94;
 }/*# sourceMappingURL=styles.css.map */
