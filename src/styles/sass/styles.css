@@ -50,6 +50,10 @@
   -o-object-fit: contain;
      object-fit: contain;
 }
+.hero .inputs-search .btn-primary {
+  background-color: #000;
+  border: 1px solid #000;
+}
 @media screen and (max-width: 767px) {
   .hero .flight-search-box {
     top: 25%;
