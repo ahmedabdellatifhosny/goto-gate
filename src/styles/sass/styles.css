@@ -251,17 +251,62 @@ a {
   color: #065e94;
 }
 
-.travels .result-search {
-  width: 50%;
+.travels {
+  padding: 20px 0;
 }
-.travels .result-search ul li {
+.travels .result-search {
+  position: absolute;
+  top: 7px;
+  left: 50%;
+  transform: translateX(-25%);
+  -webkit-transform: translateX(-25%);
+  -moz-transform: translateX(-25%);
+  -ms-transform: translateX(-25%);
+  -o-transform: translateX(-25%);
+}
+.travels .result-search .result-nav ul li {
   border-right: 1px solid #ccc;
   padding-right: 10px;
 }
-.travels .result-search ul li:last-child {
+.travels .result-search .result-nav ul li:last-child {
   border-right: none;
 }
 .travels .result-search .accordion-button {
   background-color: #fff;
   padding-top: 35px;
+}
+.travels .result-search .accordion-body {
+  position: absolute;
+  top: 85%;
+  left: -99%;
+  width: 100vw;
+  height: 200px;
+  max-height: 0;
+  transition: max-height 1s ease-in-out;
+}
+.travels .result-search .accordion-body .flight-search-box {
+  position: absolute;
+  left: -3%;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.travels .result-search .accordion-body .flight-search-box label {
+  color: #222;
+}
+.travels .result-search .accordion-body .flight-search-box .nav-tabs {
+  border: 0;
+  color: #222;
+}
+.travels .result-search .accordion-body .flight-search-box .nav-tabs :hover {
+  border-color: transparent !important;
+  cursor: pointer;
+}
+.travels .result-search .accordion-body .flight-search-box .nav-tabs .active {
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+.travels .result-search .accordion-body .flight-search-box .tab-content {
+  padding: 10px;
 }/*# sourceMappingURL=styles.css.map */

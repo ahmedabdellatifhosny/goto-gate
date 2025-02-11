@@ -1,19 +1,68 @@
 .travels {
-  .result-search {
-    width: 50%;
-    ul {
-      li {
-        border-right: 1px solid #ccc;
-        padding-right: 10px;
+  padding: 20px 0;
 
-        &:last-child {
-          border-right: none;
+  .result-search {
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    transform: translateX(-25%);
+    -webkit-transform: translateX(-25%);
+    -moz-transform: translateX(-25%);
+    -ms-transform: translateX(-25%);
+    -o-transform: translateX(-25%);
+    .result-nav {
+      ul {
+        li {
+          border-right: 1px solid #ccc;
+          padding-right: 10px;
+
+          &:last-child {
+            border-right: none;
+          }
         }
       }
     }
-    .accordion-button{
+
+    .accordion-button {
+      background-color: #fff;
+      padding-top: 35px;
+    }
+    .accordion-body {
+      position: absolute;
+      top: 85%;
+      left: -99%;
+      width: 100vw;
+      height: 200px;
+      max-height: 0;
+      transition: max-height 1s ease-in-out;
+      .flight-search-box {
+        position: absolute;
+        left: -3%;
+        width: 100%;
         background-color: #fff;
-        padding-top: 35px;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+        label {
+          color: #222;
+        }
+        .nav-tabs {
+          border: 0;
+          color: #222;
+
+          :hover {
+            border-color: transparent !important;
+            cursor: pointer;
+          }
+          .active {
+            background-color: transparent !important;
+            border-color: transparent !important;
+          }
+        }
+        .tab-content {
+          padding: 10px;
+        }
+      }
     }
   }
 }

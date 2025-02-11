@@ -4,9 +4,30 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row, Tab, Tabs } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
+import MultiCity from "../home/MultiCity";
+import OneWay from "../home/OneWay";
+import Return from "../home/Return";
+import { SetStateAction, useState } from "react";
+import dynamic from "next/dynamic";
 export default function ResultSearch() {
+  const [activeTab, setActiveTab] = useState("return");
+  const Select = dynamic(() => import("react-select"), { ssr: false });
+  const handleTabChange = (tab: SetStateAction<string>) => {
+    setActiveTab(tab);
+  };
+
+  interface CheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
+    children: React.ReactNode;
+  }
+
+  const Checkbox: React.FC<CheckboxProps> = ({ children, ...props }) => (
+    <label>
+      <input type="checkbox" {...props} />
+      {children}
+    </label>
+  );
   return (
     <div className="result-search">
       <Accordion defaultActiveKey="0">
@@ -16,7 +37,7 @@ export default function ResultSearch() {
               <Row>
                 <Col md={12}>
                   <div className="search-result">
-                    <ul className="list-unstyled d-flex gap-3">
+                    <ul className="list-unstyled d-flex gap-3 result-nav">
                       <li>
                         <div className="travel-airport">
                           <span className="ms-3 me-3">Dubai (DXB)</span>
@@ -39,13 +60,83 @@ export default function ResultSearch() {
             </Container>
           </Accordion.Header>
           <Accordion.Body>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            <div className="flight-search-box ">
+              <Tabs
+                activeKey={activeTab}
+                onSelect={(tab) => setActiveTab(tab)}
+                id="radio-tabs-example"
+                className="py-3"
+              >
+                <Tab
+                  eventKey="return"
+                  title={
+                    <label className="d-flex align-items-center ">
+                      <input
+                        type="radio"
+                        name="tab"
+                        value="return"
+                        checked={activeTab === "return"}
+                        onChange={() => handleTabChange("return")}
+                        className="me-2"
+                      />
+                      Return
+                    </label>
+                  }
+                >
+                  <div className="tab-content">
+                    <div className="return">
+                      <Return />
+                    </div>
+                  </div>
+                </Tab>
+
+                <Tab
+                  eventKey="oneway"
+                  title={
+                    <label className="d-flex align-items-center">
+                      <input
+                        type="radio"
+                        name="tab"
+                        value="oneway"
+                        checked={activeTab === "oneway"}
+                        onChange={() => handleTabChange("oneway")}
+                        className="me-2"
+                      />
+                      One-Way
+                    </label>
+                  }
+                >
+                  <div className="tab-content">
+                    <div className="one-way">
+                      <OneWay />
+                    </div>
+                  </div>
+                </Tab>
+
+                <Tab
+                  eventKey="multicity"
+                  title={
+                    <label className="d-flex align-items-center">
+                      <input
+                        type="radio"
+                        name="tab"
+                        value="multicity"
+                        checked={activeTab === "multicity"}
+                        onChange={() => handleTabChange("multicity")}
+                        className="me-2"
+                      />
+                      Multi-City
+                    </label>
+                  }
+                >
+                  <div className="tab-content">
+                    <div className="multi-city">
+                      <MultiCity />
+                    </div>
+                  </div>
+                </Tab>
+              </Tabs>
+            </div>
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
