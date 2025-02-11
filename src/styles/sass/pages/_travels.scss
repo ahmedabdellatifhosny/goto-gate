@@ -1,0 +1,19 @@
+.travels {
+  .result-search {
+    width: 50%;
+    ul {
+      li {
+        border-right: 1px solid #ccc;
+        padding-right: 10px;
+
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+    .accordion-button{
+        background-color: #fff;
+        padding-top: 35px;
+    }
+  }
+}

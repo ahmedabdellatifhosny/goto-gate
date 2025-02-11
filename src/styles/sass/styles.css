@@ -249,4 +249,19 @@ a {
 }
 .contact-info .table-content ul li a:hover {
   color: #065e94;
+}
+
+.travels .result-search {
+  width: 50%;
+}
+.travels .result-search ul li {
+  border-right: 1px solid #ccc;
+  padding-right: 10px;
+}
+.travels .result-search ul li:last-child {
+  border-right: none;
+}
+.travels .result-search .accordion-button {
+  background-color: #fff;
+  padding-top: 35px;
 }/*# sourceMappingURL=styles.css.map */
