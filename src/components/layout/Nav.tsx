@@ -11,7 +11,7 @@ export default function Nav() {
             <Image
               src="/images/icons/logo.svg"
               alt="logo"
-              width={240}
+              width={140}
               height={60}
             />
           </Link>

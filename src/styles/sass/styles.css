@@ -264,6 +264,9 @@ a {
   -ms-transform: translateX(-25%);
   -o-transform: translateX(-25%);
 }
+.travels .result-search .search-result {
+  padding-top: 15px;
+}
 .travels .result-search .result-nav ul li {
   border-right: 1px solid #ccc;
   padding-right: 10px;
@@ -272,25 +275,34 @@ a {
   border-right: none;
 }
 .travels .result-search .accordion-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #fff;
-  padding-top: 35px;
+  padding-left: 0;
+}
+.travels .result-search .accordion-button::after {
+  background-color: #41d3ff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 .travels .result-search .accordion-body {
   position: absolute;
   top: 88%;
-  left: -99%;
+  left: -117.1%;
   width: 100vw;
-  height: 200px;
   max-height: 0;
   transition: max-height 1s ease-in-out;
 }
 .travels .result-search .accordion-body .flight-search-box {
   position: absolute;
-  left: -3%;
   width: 100%;
-  background-color: red;
+  background-color: #fff;
   padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 .travels .result-search .accordion-body .flight-search-box label {
   color: #222;
