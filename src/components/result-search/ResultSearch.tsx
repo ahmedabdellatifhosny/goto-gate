@@ -29,117 +29,134 @@ export default function ResultSearch() {
     </label>
   );
   return (
-    <div className="result-search">
-      <Accordion defaultActiveKey="0">
-        <Accordion.Item eventKey="0">
-          <Accordion.Header>
-            <Container>
-              <Row>
-                <Col md={12}>
-                  <div className="search-result">
-                    <ul className="list-unstyled d-flex gap-3 result-nav">
-                      <li>
-                        <div className="travel-airport">
-                          <span className="ms-3 me-3">Dubai (DXB)</span>
-                          <FontAwesomeIcon icon={faArrowRight} />
-                          <span className="ms-3 me-3">Abu Dhabi (AUH)</span>
-                        </div>
-                      </li>
-                      <li>
-                        <FontAwesomeIcon icon={faCalendarDays} />{" "}
-                        <span>13 Feb</span>
-                      </li>
-                      <li>
-                        <FontAwesomeIcon icon={faUser} />
-                        <span className="px-2">1</span>
-                      </li>
-                    </ul>
-                  </div>
-                </Col>
-              </Row>
-            </Container>
-          </Accordion.Header>
-          <Accordion.Body>
-            <div className="flight-search-box ">
-              <Tabs
-                activeKey={activeTab}
-                onSelect={(tab) => setActiveTab(tab)}
-                id="radio-tabs-example"
-                className="py-3"
-              >
-                <Tab
-                  eventKey="return"
-                  title={
-                    <label className="d-flex align-items-center ">
-                      <input
-                        type="radio"
-                        name="tab"
-                        value="return"
-                        checked={activeTab === "return"}
-                        onChange={() => handleTabChange("return")}
-                        className="me-2"
-                      />
-                      Return
-                    </label>
-                  }
-                >
-                  <div className="tab-content">
-                    <div className="return">
-                      <Return />
+    <>
+      <div className="result-search">
+        <Accordion defaultActiveKey="0">
+          <Accordion.Item eventKey="0">
+            <Accordion.Header>
+              <Container>
+                <Row>
+                  <Col md={12}>
+                    <div className="search-result">
+                      <ul className="list-unstyled d-flex gap-3 result-nav">
+                        <li>
+                          <div className="travel-airport">
+                            <span className="ms-3 me-3">Dubai (DXB)</span>
+                            <FontAwesomeIcon icon={faArrowRight} />
+                            <span className="ms-3 me-3">Abu Dhabi (AUH)</span>
+                          </div>
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faCalendarDays} />{" "}
+                          <span>13 Feb</span>
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faUser} />
+                          <span className="px-2">1</span>
+                        </li>
+                      </ul>
                     </div>
-                  </div>
-                </Tab>
+                  </Col>
+                </Row>
+              </Container>
+            </Accordion.Header>
+            <Accordion.Body>
+              <div className="flight-search-box ">
+                <Tabs
+                  activeKey={activeTab}
+                  onSelect={(tab) => setActiveTab(tab)}
+                  id="radio-tabs-example"
+                  className="py-3"
+                >
+                  <Tab
+                    eventKey="return"
+                    title={
+                      <label className="d-flex align-items-center ">
+                        <input
+                          type="radio"
+                          name="tab"
+                          value="return"
+                          checked={activeTab === "return"}
+                          onChange={() => handleTabChange("return")}
+                          className="me-2"
+                        />
+                        Return
+                      </label>
+                    }
+                  >
+                    <div className="tab-content">
+                      <div className="return">
+                        <Return />
+                      </div>
+                    </div>
+                  </Tab>
 
-                <Tab
-                  eventKey="oneway"
-                  title={
-                    <label className="d-flex align-items-center">
-                      <input
-                        type="radio"
-                        name="tab"
-                        value="oneway"
-                        checked={activeTab === "oneway"}
-                        onChange={() => handleTabChange("oneway")}
-                        className="me-2"
-                      />
-                      One-Way
-                    </label>
-                  }
-                >
-                  <div className="tab-content">
-                    <div className="one-way">
-                      <OneWay />
+                  <Tab
+                    eventKey="oneway"
+                    title={
+                      <label className="d-flex align-items-center">
+                        <input
+                          type="radio"
+                          name="tab"
+                          value="oneway"
+                          checked={activeTab === "oneway"}
+                          onChange={() => handleTabChange("oneway")}
+                          className="me-2"
+                        />
+                        One-Way
+                      </label>
+                    }
+                  >
+                    <div className="tab-content">
+                      <div className="one-way">
+                        <OneWay />
+                      </div>
                     </div>
-                  </div>
-                </Tab>
+                  </Tab>
 
-                <Tab
-                  eventKey="multicity"
-                  title={
-                    <label className="d-flex align-items-center">
-                      <input
-                        type="radio"
-                        name="tab"
-                        value="multicity"
-                        checked={activeTab === "multicity"}
-                        onChange={() => handleTabChange("multicity")}
-                        className="me-2"
-                      />
-                      Multi-City
-                    </label>
-                  }
-                >
-                  <div className="tab-content">
-                    <div className="multi-city">
-                      <MultiCity />
+                  <Tab
+                    eventKey="multicity"
+                    title={
+                      <label className="d-flex align-items-center">
+                        <input
+                          type="radio"
+                          name="tab"
+                          value="multicity"
+                          checked={activeTab === "multicity"}
+                          onChange={() => handleTabChange("multicity")}
+                          className="me-2"
+                        />
+                        Multi-City
+                      </label>
+                    }
+                  >
+                    <div className="tab-content">
+                      <div className="multi-city">
+                        <MultiCity />
+                      </div>
                     </div>
-                  </div>
-                </Tab>
-              </Tabs>
-            </div>
-          </Accordion.Body>
-        </Accordion.Item>
-      </Accordion>
-    </div>
+                  </Tab>
+                </Tabs>
+              </div>
+            </Accordion.Body>
+          </Accordion.Item>
+        </Accordion>
+      </div>
+
+      <div className="content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas beatae
+        recusandae, iure totam reiciendis nam perferendis, asperiores dolore
+        labore tempore distinctio itaque sed qui suscipit alias rem veniam
+        eveniet corrupti error obcaecati dolorem. Provident repudiandae commodi
+        impedit iusto esse, aspernatur ut dolorum deserunt molestiae soluta
+        saepe nam delectus odit ratione vero necessitatibus excepturi
+        consectetur blanditiis atque obcaecati? Sed ratione perferendis, vitae
+        et officiis beatae fuga aliquam quam exercitationem pariatur! Commodi
+        culpa voluptatem natus impedit optio consequuntur rem error, quidem
+        placeat accusantium reiciendis quae quisquam excepturi, quis quo numquam
+        porro! Repellat ipsa eaque ullam aliquam vitae obcaecati eveniet
+        officiis itaque explicabo!
+      </div>
+    </>
   );
 }
