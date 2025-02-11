@@ -5,7 +5,9 @@ import ResultSearch from "../../components/result-search/ResultSearch";
 export default function page() {
   return (
     <section className="travels">
-      <ResultSearch />
+      <div>
+        <ResultSearch />
+      </div>
     </section>
   );
 }
