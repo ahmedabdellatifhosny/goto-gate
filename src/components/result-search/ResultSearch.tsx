@@ -1,4 +1,3 @@
-
 import {
   faArrowRight,
   faCalendarDays,
@@ -34,7 +33,7 @@ export default function ResultSearch() {
   return (
     <>
       <div className="result-search">
-        <Accordion defaultActiveKey="0">
+        <Accordion defaultActiveKey="">
           <Accordion.Item eventKey="0">
             <Accordion.Header>
               <Container>
