@@ -1,5 +1,6 @@
 .travels {
   padding: 20px 0;
+  background-color: #f5f5f5;
 
   .result-search {
     position: absolute;
@@ -75,6 +76,11 @@
           padding: 10px;
         }
       }
+    }
+  }
+  .content {
+    .accordion {
+      margin-bottom: 10px;
     }
   }
 }

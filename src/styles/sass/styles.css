@@ -253,6 +253,7 @@ a {
 
 .travels {
   padding: 20px 0;
+  background-color: #f5f5f5;
 }
 .travels .result-search {
   position: absolute;
@@ -321,4 +322,7 @@ a {
 }
 .travels .result-search .accordion-body .flight-search-box .tab-content {
   padding: 10px;
+}
+.travels .content .accordion {
+  margin-bottom: 10px;
 }/*# sourceMappingURL=styles.css.map */
