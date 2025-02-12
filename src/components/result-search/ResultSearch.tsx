@@ -149,7 +149,9 @@ export default function ResultSearch() {
         <Container>
           <Row>
             <Col md={4}>
-              <h6>Showing 525 of 525 flights</h6>
+              <div className="search-reult-sidebar my-5">
+                <h6>Showing 525 of 525 flights</h6>
+              </div>
 
               <div className="number-of-stops">
                 <Accordion defaultActiveKey="0">
