@@ -159,10 +159,10 @@ export default function Page(): JSX.Element {
             </div>
           </Collapse>
           <Row>
-            <Col md={4}>
+            <Col md={3}>
               <Sidebar />
             </Col>
-            <Col md={8} className="my-5">
+            <Col md={9} className="my-5">
               <div className="nav-tab">
                 <Tabs
                   defaultActiveKey="bestvalue"

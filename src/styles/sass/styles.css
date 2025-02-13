@@ -233,6 +233,43 @@
   font-size: 12px;
 }
 
+.tickets {
+  background: #fff;
+  padding: 20px;
+  line-height: 1.5rem;
+}
+.tickets a {
+  color: black;
+}
+.tickets .type-trip ul li:last-child {
+  color: rgb(115, 115, 115);
+}
+.tickets .return-box .duration .self-transfer {
+  color: #803d00;
+  background-color: #fcf3d8;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 5px;
+}
+.tickets .view-trip .btn-primary {
+  background-color: #41d3ff !important;
+  color: #000;
+  font-weight: 600;
+  border-color: #41d3ff;
+  width: 80%;
+  padding: 10px;
+  margin-left: 10px;
+}
+.tickets .view-trip .btn-primary:hover {
+  background-color: #00c3ff !important;
+}
+.tickets .view-trip .hurry {
+  color: #064a75;
+}
+
 * {
   margin: 0;
   padding: 0;
