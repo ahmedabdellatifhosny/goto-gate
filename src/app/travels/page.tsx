@@ -202,8 +202,10 @@ export default function Page(): JSX.Element {
                         <small>US$661.12</small>
                       </div>
                     }
-                  ></Tab>
-                  <Tickets />
+                  >
+                    <Tickets />
+                  </Tab>
+
                   <Tab
                     eventKey="more"
                     title={

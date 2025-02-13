@@ -5,8 +5,8 @@ export default function Tickets() {
     <div>
       <Container>
         <Row>
-          <Col md={9}></Col>
-          <Col md={3}></Col>
+          <Col md={9}>qqq</Col>
+          <Col md={3}>www</Col>
         </Row>
       </Container>
     </div>
