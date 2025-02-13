@@ -6,6 +6,7 @@ import Image from "next/image";
 import Button from "react-bootstrap/Button";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
+import { Placement } from "react-bootstrap/esm/types";
 
 export default function Tickets() {
   return (
@@ -122,7 +123,7 @@ export default function Tickets() {
             </Col>
             <Col md={3}>
               <div className="view-trip ">
-                {["left"].map((placement) => (
+                {(["left"] as Placement[]).map((placement) => (
                   <OverlayTrigger
                     key={placement}
                     placement={placement}

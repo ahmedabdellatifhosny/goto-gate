@@ -180,6 +180,15 @@ export default function Page(): JSX.Element {
                     }
                   >
                     <Tickets />
+                    <Tickets />
+                    <Tickets />
+                    <Tickets />
+                    <Tickets />
+                    <Tickets />
+                    <Tickets />
+                    <Tickets />
+                    <Tickets />
+                    <Tickets />
                   </Tab>
 
                   <Tab
@@ -192,6 +201,15 @@ export default function Page(): JSX.Element {
                     }
                   >
                     <Tickets />
+                    <Tickets />
+                    <Tickets />
+                    <Tickets />
+                    <Tickets />
+                    <Tickets />
+                    <Tickets />
+                    <Tickets />
+                    <Tickets />
+                    <Tickets />
                   </Tab>
 
                   <Tab
@@ -203,6 +221,15 @@ export default function Page(): JSX.Element {
                       </div>
                     }
                   >
+                    <Tickets />
+                    <Tickets />
+                    <Tickets />
+                    <Tickets />
+                    <Tickets />
+                    <Tickets />
+                    <Tickets />
+                    <Tickets />
+                    <Tickets />
                     <Tickets />
                   </Tab>
 
