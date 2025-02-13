@@ -1,6 +1,13 @@
 "use client";
 
-import { Container, Row, Col, Button, Collapse } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Button,
+  Collapse,
+  Dropdown,
+} from "react-bootstrap";
 import Sidebar from "../../components/layout/Sidebar";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
@@ -12,7 +19,7 @@ import { faUser } from "@fortawesome/free-regular-svg-icons";
 import MultiCity from "../../components/home/MultiCity";
 import OneWay from "../../components/home/OneWay";
 import Return from "../../components/home/Return";
-import Dropdown from "react-bootstrap/Dropdown";
+import Tickets from "../../components/Tickets";
 
 export default function Page(): JSX.Element {
   const [open, setOpen] = useState<boolean>(false);
@@ -172,7 +179,7 @@ export default function Page(): JSX.Element {
                       </div>
                     }
                   >
-                    Tab content for best value
+                    <Tickets />
                   </Tab>
 
                   <Tab
@@ -184,7 +191,7 @@ export default function Page(): JSX.Element {
                       </div>
                     }
                   >
-                    Tab content for Cheapest
+                    <Tickets />
                   </Tab>
 
                   <Tab
@@ -195,10 +202,8 @@ export default function Page(): JSX.Element {
                         <small>US$661.12</small>
                       </div>
                     }
-                  >
-                    Tab content for Shorter Flight Time Tab
-                  </Tab>
-
+                  ></Tab>
+                  <Tickets />
                   <Tab
                     eventKey="more"
                     title={
@@ -212,14 +217,16 @@ export default function Page(): JSX.Element {
                           </Dropdown.Toggle>
                           <Dropdown.Menu>
                             <Dropdown.Item href="#/action-1">
-                              Action
+                              <h6>Shorter Flight Time</h6>
+                              <small>US$661.12</small>
                             </Dropdown.Item>
                             <Dropdown.Item href="#/action-2">
-                              Another action
+                              <h6>Shorter Flight Time</h6>
+                              <small>US$661.12</small>
                             </Dropdown.Item>
-                            <Dropdown.Item href="#/action-3">
+                            {/* <Dropdown.Item href="#/action-3">
                               Something else
-                            </Dropdown.Item>
+                            </Dropdown.Item> */}
                           </Dropdown.Menu>
                         </Dropdown>
                       </div>
