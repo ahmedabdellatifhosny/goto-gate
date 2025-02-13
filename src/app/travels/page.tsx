@@ -3,14 +3,15 @@ import { Container, Row, Col, Button, Collapse } from "react-bootstrap";
 import Sidebar from "../../components/layout/Sidebar";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
-import { useState } from "react";
+import { JSX, useState } from "react";
 import Image from "next/image";
 import { faCalendarDays, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 
-export default function page() {
-  const [open, setOpen] = useState(false);
+export default function Page(): JSX.Element {
+  const [open, setOpen] = useState<boolean>(false);
+
   return (
     <section className="travels">
       <div className="search-result">
@@ -23,7 +24,7 @@ export default function page() {
             <li>
               <span>dubai(dxb)</span>
               <Image
-                src={"/images/icons/arrows.svg"}
+                src="/images/icons/arrows.svg"
                 width={20}
                 height={20}
                 alt="arrow"
@@ -43,7 +44,7 @@ export default function page() {
           </ul>
         </Button>
       </div>
-      <div className="content ">
+      <div className="content">
         <Container>
           <Collapse in={open} className="py-2">
             <div id="example-collapse-text">
@@ -57,7 +58,6 @@ export default function page() {
             <Col md={4}>
               <Sidebar />
             </Col>
-
             <Col md={8}>
               <Tabs
                 defaultActiveKey="home"
