@@ -356,7 +356,11 @@ a {
 .travels .content .flight-search-box .tab-content {
   padding: 10px;
 }
+.travels .content .nav-justified {
+  border: none;
+}
 .travels .content .nav-justified .nav-item .nav-link {
+  color: #222;
   padding: 25px 10px;
   background-color: #fff;
   border-radius: 5px;
@@ -367,6 +371,7 @@ a {
 }
 .travels .content .nav-justified .nav-item .more-menu {
   padding: 13px 10px;
+  color: #222;
 }
 
 @media screen and (max-width: 767px) {

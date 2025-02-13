@@ -89,8 +89,10 @@
       }
     }
     .nav-justified {
+      border: none;
       .nav-item {
         .nav-link {
+          color: #222;
           padding: 25px 10px;
           background-color: #fff;
           border-radius: 5px;
@@ -101,6 +103,7 @@
         }
         .more-menu {
           padding: 13px 10px;
+          color: #222;
         }
       }
     }
