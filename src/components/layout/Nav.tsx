@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Nav() {
   return (
-    <div className="header-navbar">
+    <div className="header-navbar position-fixed w-100">
       <Container>
         <div className="text-uppercase">
           <Link href="/">
