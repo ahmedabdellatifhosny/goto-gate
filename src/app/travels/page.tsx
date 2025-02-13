@@ -12,12 +12,12 @@ import { faUser } from "@fortawesome/free-regular-svg-icons";
 import MultiCity from "../../components/home/MultiCity";
 import OneWay from "../../components/home/OneWay";
 import Return from "../../components/home/Return";
-import dynamic from "next/dynamic";
+import Dropdown from "react-bootstrap/Dropdown";
 
 export default function Page(): JSX.Element {
   const [open, setOpen] = useState<boolean>(false);
-const [activeTab, setActiveTab] = useState("return");
-  const Select = dynamic(() => import("react-select"), { ssr: false });
+  const [activeTab, setActiveTab] = useState("return");
+
   const handleTabChange = (tab: SetStateAction<string>) => {
     setActiveTab(tab);
   };
@@ -155,26 +155,78 @@ const [activeTab, setActiveTab] = useState("return");
             <Col md={4}>
               <Sidebar />
             </Col>
-            <Col md={8}>
-              <Tabs
-                defaultActiveKey="home"
-                id="justify-tab-example"
-                className="mb-3"
-                justify
-              >
-                <Tab eventKey="home" title="Home">
-                  Tab content for Home
-                </Tab>
-                <Tab eventKey="profile" title="Profile">
-                  Tab content for Profile
-                </Tab>
-                <Tab eventKey="longer-tab" title="Loooonger Tab">
-                  Tab content for Loooonger Tab
-                </Tab>
-                <Tab eventKey="contact" title="Contact" disabled>
-                  Tab content for Contact
-                </Tab>
-              </Tabs>
+            <Col md={8} className="my-5">
+              <div className="nav-tab">
+                <Tabs
+                  defaultActiveKey="bestvalue"
+                  id="justify-tab-example"
+                  className="mb-3"
+                  justify
+                >
+                  <Tab
+                    eventKey="bestvalue"
+                    title={
+                      <div className="best-value d-flex flex-column justify-content-start align-items-center">
+                        <h6>Best Value</h6>
+                        <small>US$661.12</small>
+                      </div>
+                    }
+                  >
+                    Tab content for best value
+                  </Tab>
+
+                  <Tab
+                    eventKey="cheapset"
+                    title={
+                      <div className="cheapset">
+                        <h6>Cheapest</h6>
+                        <small>US$661.12</small>
+                      </div>
+                    }
+                  >
+                    Tab content for Cheapest
+                  </Tab>
+
+                  <Tab
+                    eventKey="shorterflighttime"
+                    title={
+                      <div className="shorter">
+                        <h6>Shorter Flight Time</h6>
+                        <small>US$661.12</small>
+                      </div>
+                    }
+                  >
+                    Tab content for Shorter Flight Time Tab
+                  </Tab>
+
+                  <Tab
+                    eventKey="more"
+                    title={
+                      <div className="more-menu">
+                        <Dropdown as="div">
+                          <Dropdown.Toggle
+                            as="div"
+                            className="dropdown-toggle-custom"
+                          >
+                            More Options
+                          </Dropdown.Toggle>
+                          <Dropdown.Menu>
+                            <Dropdown.Item href="#/action-1">
+                              Action
+                            </Dropdown.Item>
+                            <Dropdown.Item href="#/action-2">
+                              Another action
+                            </Dropdown.Item>
+                            <Dropdown.Item href="#/action-3">
+                              Something else
+                            </Dropdown.Item>
+                          </Dropdown.Menu>
+                        </Dropdown>
+                      </div>
+                    }
+                  ></Tab>
+                </Tabs>
+              </div>
             </Col>
           </Row>
         </Container>

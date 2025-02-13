@@ -88,6 +88,22 @@
         padding: 10px;
       }
     }
+    .nav-justified {
+      .nav-item {
+        .nav-link {
+          padding: 25px 10px;
+          background-color: #fff;
+          border-radius: 5px;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          -ms-border-radius: 5px;
+          -o-border-radius: 5px;
+        }
+        .more-menu {
+          padding: 13px 10px;
+        }
+      }
+    }
   }
 }
 
