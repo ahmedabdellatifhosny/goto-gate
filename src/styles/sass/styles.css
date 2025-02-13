@@ -289,6 +289,7 @@ a {
   padding-top: 0;
 }
 .travels .search-result .btn-primary .searched-details {
+  max-height: 30px;
   color: #222;
   padding: 10px;
   border-radius: 5px;
@@ -318,10 +319,48 @@ a {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+.travels .search-result .btn-primary .searched-details li .fa-chevron-up.rotate {
+  transform: rotate(180deg);
 }
 .travels .content {
   padding-top: 130px;
 }
 .travels .content .accordion {
   margin: 10px 0;
+}
+.travels .content .flight-search-box {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+}
+.travels .content .flight-search-box label {
+  color: #222;
+}
+.travels .content .flight-search-box .nav-tabs {
+  border: 0;
+  color: #222;
+}
+.travels .content .flight-search-box .nav-tabs :hover {
+  border-color: transparent !important;
+  cursor: pointer;
+}
+.travels .content .flight-search-box .nav-tabs .active {
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+.travels .content .flight-search-box .tab-content {
+  padding: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .flight-search-box {
+    top: 25%;
+    width: 90%;
+  }
 }/*# sourceMappingURL=styles.css.map */
